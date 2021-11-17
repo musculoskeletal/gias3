@@ -1,4 +1,4 @@
-GIAS2 (Geometry Image-Analysis Statistics)
+GIAS3 (Geometry Image-Analysis Statistics)
 ==========================================
 
 A Python library for tools used in musculoskeletal modelling. Includes
@@ -42,7 +42,7 @@ Windows
 ~~~~~~~
 
 1. The most painless way to install the python dependencies required by
-   GIAS2 is to install the umbrella package
+   GIAS3 is to install the umbrella package
    `Anaconda <https://www.continuum.io/downloads>`__.
 2. If you would like to use in-built visualisation modules, install
    Mayavi. In you installed Anaconda, from the Anaconda commandline,
@@ -66,13 +66,13 @@ gias2/examples/ directory. We are working to add more examples.
 Tutorials
 ---------
 
--  `Using GIAS2 with MAP Client for lower limb model
+-  `Using GIAS3 with MAP Client for lower limb model
    generation <http://map-client-fai-workshop.readthedocs.io/en/latest/>`__
--  `Using GIAS2 for statistical shape
-   modelling <http://gias2-shape-modelling-tutorial.readthedocs.io/en/latest/>`__
+-  `Using GIAS3 for statistical shape
+   modelling <http://gias3-shape-modelling-tutorial.readthedocs.io/en/latest/>`__
 
 License
 -------
 
-GIAS2 is under the `Mozilla Public license
+GIAS3 is under the `Mozilla Public license
 2.0 <https://www.mozilla.org/en-US/MPL/2.0/>`__.
