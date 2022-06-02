@@ -5,6 +5,22 @@ A Python library for tools used in musculoskeletal modelling. Includes
 tools for parametric meshing, registration, image analysis, statistical
 shape modelling, and 3-D visualisation using Mayavi.
 
+Installation order
+------------------
+
+- gias3.common
+- gias3.fieldwork
+- gias3.registration
+- gias3.learning
+- gias3.image-analysis
+- gias3.mesh
+- gias3.io
+- gias3.examples
+- gias3.applications
+- gias3.mapclientpluginutilities
+- gias3.testing
+- gias3.musculoskeletal (requires: OpenSIM)
+
 Optional dependencies
 ---------------------
 
@@ -31,12 +47,11 @@ Linux
    2. Install mayavi through your package manager (e.g. sudo apt-get
       install mayavi2) or pip (e.g. pip install --user mayavi)
 
-2. Download the
-   `wheel <https://bitbucket.org/jangle/gias2/downloads/>`__ and
+2. Install GIAS 3
 
    ::
 
-       pip install --user [path/to/wheel]
+       pip install gias3
 
 Windows
 ~~~~~~~
@@ -60,8 +75,8 @@ Windows
 Examples
 --------
 
-Example of some the capabilities of GIAS2 can be found in the
-gias2/examples/ directory. We are working to add more examples.
+Example of some the capabilities of GIAS3 can be found in the
+gias3/examples/ directory. We are working to add more examples.
 
 Tutorials
 ---------
