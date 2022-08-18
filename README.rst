@@ -36,6 +36,7 @@ Optional dependencies
 -  pydicom (for reading DICOM images)
 -  Cython (speeds up active shape model and random forest segmentation)
 -  matplotlib for some inbuilt plotting functions
+-  OpenSIM (required for gias3.musculoskeletal)
 
 Installation
 ------------
@@ -53,9 +54,8 @@ Linux
       install mayavi2`) or pip (e.g., `pip install --user mayavi`)
 
 2. If you would like to use the GIAS3 Musculoskeletal module, you must
-   first install OpenSIM to your Python scripting environment. To do
-   this, please follow the instructions given `here <https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python/>`_.
-   Otherwise, skip this step.
+   first install OpenSIM to your Python scripting environment. Otherwise,
+   you may skip this step. See `Installing OpenSIM`_ for more information.
 
 3. Install GIAS3
 
@@ -74,9 +74,8 @@ Windows
      otherwise, use pip (e.g., `pip install mayavi`).
 
 2. If you would like to use the GIAS3 Musculoskeletal module, you must
-   first install OpenSIM to your Python scripting environment. To do
-   this, please follow the instructions given `here <https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python/>`_.
-   Otherwise, skip this step.
+   first install OpenSIM to your Python scripting environment. Otherwise,
+   you may skip this step. See `Installing OpenSIM`_ for more information.
 
 3. Install GIAS3
 
@@ -104,6 +103,17 @@ For example, if you want to include the modules `gias3.applications` and
 ::
 
    pip install gias3[apps,vis]
+
+Installing OpenSIM
+~~~~~~~~~~~~~~~~~~
+
+To be able to make use of the GIAS3 Musculoskeletal module, the user must
+first install OpenSIM to their Python scripting environment.
+
+First, download OpenSIM from `this <https://simtk.org/frs/?group_id=91>`_ page.
+
+Then, follow the instructions `here <https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python/#ScriptinginPython-SettingupyourPythonscriptingenvironment>`_
+to install OpenSIM to your Python scripting environment.
 
 Tutorials
 ---------
