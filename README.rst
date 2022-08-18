@@ -5,21 +5,26 @@ A Python library for tools used in musculoskeletal modelling. Includes
 tools for parametric meshing, registration, image analysis, statistical
 shape modelling, and 3-D visualisation using Mayavi.
 
-Installation order
-------------------
+Modules
+-------
 
-- gias3.common
-- gias3.fieldwork
-- gias3.registration
-- gias3.learning
-- gias3.image-analysis
-- gias3.mesh
-- gias3.io
-- gias3.examples
-- gias3.applications
-- gias3.mapclientpluginutilities
-- gias3.testing
-- gias3.musculoskeletal (requires: OpenSIM)
+This meta-package includes the following modules:
+
+- `gias3.common <https://pypi.org/project/gias3.common/>`_
+- `gias3.fieldwork <https://pypi.org/project/gias3.fieldwork/>`_
+- `gias3.registration <https://pypi.org/project/gias3.registration/>`_
+- `gias3.learning <https://pypi.org/project/gias3.learning/>`_
+- `gias3.image-analysis <https://pypi.org/project/gias3.image-analysis/>`_
+- `gias3.mesh <https://pypi.org/project/gias3.mesh/>`_
+- `gias3.applications (optional) <https://pypi.org/project/gias3.applications/>`_
+- `gias3.examples (optional) <https://pypi.org/project/gias3.examples/>`_
+- `gias3.io (optional) <https://pypi.org/project/gias3.io/>`_
+- `gias3.testing (optional) <https://pypi.org/project/gias3.testing/>`_
+- `gias3.visualisation (optional) <https://pypi.org/project/gias3.visualisation/>`_
+- `gias3.mapclientpluginutilities (optional) <https://pypi.org/project/gias3.mapclientpluginutilities/>`_
+- `gias3.musculoskeletal (optional - requires: OpenSIM) <https://pypi.org/project/gias3.musculoskeletal/>`_
+
+See `Installing optional modules`_ for more information.
 
 Optional dependencies
 ---------------------
@@ -31,6 +36,7 @@ Optional dependencies
 -  pydicom (for reading DICOM images)
 -  Cython (speeds up active shape model and random forest segmentation)
 -  matplotlib for some inbuilt plotting functions
+-  OpenSIM (required for gias3.musculoskeletal)
 
 Installation
 ------------
@@ -39,15 +45,19 @@ Linux
 ~~~~~
 
 1. If you would like to use in-built visualisation modules, first
-   install Mayavi for you distribution, else you can skip this step.
+   install Mayavi for your distribution, else you can skip this step.
 
-   1. Install VTK and VTK python bindings (e.g. through your package
+   1. Install VTK and VTK python bindings (e.g., through your package
       manager). VTK 5.10 is the most stable in my experience with
       Mayavi.
-   2. Install mayavi through your package manager (e.g. sudo apt-get
-      install mayavi2) or pip (e.g. pip install --user mayavi)
+   2. Install mayavi through your package manager (e.g. `sudo apt-get
+      install mayavi2`) or pip (e.g., `pip install --user mayavi`)
 
-2. Install GIAS 3
+2. If you would like to use the GIAS3 Musculoskeletal module, you must
+   first install OpenSIM to your Python scripting environment. Otherwise,
+   you may skip this step. See `Installing OpenSIM`_ for more information.
+
+3. Install GIAS3
 
    ::
 
@@ -56,27 +66,54 @@ Linux
 Windows
 ~~~~~~~
 
-1. The most painless way to install the python dependencies required by
-   GIAS3 is to install the umbrella package
-   `Anaconda <https://www.continuum.io/downloads>`__.
-2. If you would like to use in-built visualisation modules, install
-   Mayavi. In you installed Anaconda, from the Anaconda commandline,
+1. If you would like to use in-built visualisation modules, first
+   install Mayavi, else you can skip this step.
+
+   - If you are using Anaconda to manage your Python environment,
+     use conda to install Mayavi (e.g., `conda install mayavi`),
+     otherwise, use pip (e.g., `pip install mayavi`).
+
+2. If you would like to use the GIAS3 Musculoskeletal module, you must
+   first install OpenSIM to your Python scripting environment. Otherwise,
+   you may skip this step. See `Installing OpenSIM`_ for more information.
+
+3. Install GIAS3
 
    ::
 
-       conda install mayavi
+       pip install gias3
 
-3. Download the wheel and from the Anaconda commandline
+Installing optional modules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   ::
+Optional GIAS3 modules can be included in the installation by passing the
+corresponding keywords to `pip`:
 
-       pip install --user [path/to/wheel]
+- `apps` = gias3.applications
+- `examples` = gias3.examples
+- `tests` = gias3.testing
+- `vis` = gias3.visualisation
+- `io` = gias3.io
+- `mapclient` = gias3.mapclientpluginutilities
+- `musculoskeletal` = gias3.musculoskeletal
 
-Examples
---------
+For example, if you want to include the modules `gias3.applications` and
+`gias3.visualisation` in addition to the default modules, use the command,
 
-Example of some the capabilities of GIAS3 can be found in the
-gias3/examples/ directory. We are working to add more examples.
+::
+
+   pip install gias3[apps,vis]
+
+Installing OpenSIM
+~~~~~~~~~~~~~~~~~~
+
+To be able to make use of the GIAS3 Musculoskeletal module, the user must
+first install OpenSIM to their Python scripting environment.
+
+First, download OpenSIM from `this <https://simtk.org/frs/?group_id=91>`_ page.
+
+Then, follow the instructions `here <https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python/#ScriptinginPython-SettingupyourPythonscriptingenvironment>`_
+to install OpenSIM to your Python scripting environment.
 
 Tutorials
 ---------
