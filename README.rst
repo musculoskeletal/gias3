@@ -5,8 +5,10 @@ A Python library for tools used in musculoskeletal modelling. Includes
 tools for parametric meshing, registration, image analysis, statistical
 shape modelling, and 3-D visualisation using Mayavi.
 
-Installation order
-------------------
+Modules
+-------
+
+This meta-package includes the following modules:
 
 - gias3.common
 - gias3.fieldwork
@@ -14,12 +16,15 @@ Installation order
 - gias3.learning
 - gias3.image-analysis
 - gias3.mesh
-- gias3.io
-- gias3.examples
-- gias3.applications
-- gias3.mapclientpluginutilities
-- gias3.testing
-- gias3.musculoskeletal (requires: OpenSIM)
+- gias3.applications (optional)
+- gias3.examples (optional)
+- gias3.io (optional)
+- gias3.testing (optional)
+- gias3.visualisation (optional)
+- gias3.mapclientpluginutilities (optional)
+- gias3.musculoskeletal (optional - requires: OpenSIM)
+
+See `Installing optional modules`_ for more information.
 
 Optional dependencies
 ---------------------
@@ -39,15 +44,15 @@ Linux
 ~~~~~
 
 1. If you would like to use in-built visualisation modules, first
-   install Mayavi for you distribution, else you can skip this step.
+   install Mayavi for your distribution, else you can skip this step.
 
-   1. Install VTK and VTK python bindings (e.g. through your package
+   1. Install VTK and VTK python bindings (e.g., through your package
       manager). VTK 5.10 is the most stable in my experience with
       Mayavi.
-   2. Install mayavi through your package manager (e.g. sudo apt-get
-      install mayavi2) or pip (e.g. pip install --user mayavi)
+   2. Install mayavi through your package manager (e.g. `sudo apt-get
+      install mayavi2`) or pip (e.g., `pip install --user mayavi`)
 
-2. Install GIAS 3
+2. Install GIAS3
 
    ::
 
@@ -56,27 +61,39 @@ Linux
 Windows
 ~~~~~~~
 
-1. The most painless way to install the python dependencies required by
-   GIAS3 is to install the umbrella package
-   `Anaconda <https://www.continuum.io/downloads>`__.
-2. If you would like to use in-built visualisation modules, install
-   Mayavi. In you installed Anaconda, from the Anaconda commandline,
+1. If you would like to use in-built visualisation modules, first
+   install Mayavi, else you can skip this step.
+
+   - If you are using Anaconda to manage your Python environment,
+     use conda to install Mayavi (e.g., `conda install mayavi`),
+     otherwise, use pip (e.g., `pip install mayavi`).
+
+2. Install GIAS3
 
    ::
 
-       conda install mayavi
+       pip install gias3
 
-3. Download the wheel and from the Anaconda commandline
+Installing optional modules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   ::
+Optional GIAS3 modules can be included in the installation by passing the
+corresponding keywords to `pip`:
 
-       pip install --user [path/to/wheel]
+- `apps` = gias3.applications
+- `examples` = gias3.examples
+- `tests` = gias3.testing
+- `vis` = gias3.visualisation
+- `io` = gias3.io
+- `mapclient` = gias3.mapclientpluginutilities
+- `musculoskeletal` = gias3.musculoskeletal
 
-Examples
---------
+For example, if you want to include the modules `gias3.applications` and
+`gias3.visualisation` in addition to the default modules, use the command,
 
-Example of some the capabilities of GIAS3 can be found in the
-gias3/examples/ directory. We are working to add more examples.
+::
+
+   pip install gias3[apps,vis]
 
 Tutorials
 ---------
